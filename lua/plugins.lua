@@ -61,10 +61,16 @@ packer.startup({
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
     -- dashboard-nvim
-    use {
-      "glepnir/dashboard-nvim",
-      event = "VimEnter",
-    }
+    -- use({
+    --   "glepnir/dashboard-nvim",
+    --   event = "VimEnter",
+    --   config = function()
+    --     require("dashboard").setup {
+    --       theme = 'Hyper'
+    --     }
+    --   end,
+    --   requires = { "kyazdani42/nvim-web-devicons" }
+    -- })
     -- project
     use("ahmedkhalf/project.nvim")
     -- treesitter
