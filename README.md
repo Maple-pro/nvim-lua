@@ -1,5 +1,7 @@
 # Neovim lua configuration
 
+> Reference: [nshen/learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/tree/main)
+
 ## Shortcuts
 
 ### Buffers
