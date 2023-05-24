@@ -4,16 +4,20 @@
 
 ## Shortcuts
 
+### Navigation
+
+- `<C-o>`: back to previous space
+
 ### Buffers
 
-- `:bp`
-- `:bn`
+- `:bp`: previous buffer
+- `:bn`: next buffer
 - `:b init.lua`: open buffers
 - `:e init.lua`: open files
 
 ### Window
 
-- `<C-w> <arrow>`
+- `<C-w> <arrow>`: switch bewteen windows
 
 ### Plugins
 

@@ -67,7 +67,9 @@
         "/tmp/lua-language-server.1ZMF/meta/71ea464b",
         "/tmp/lua-language-server.zmOo/meta/71ea464b",
         "/tmp/lua-language-server.JcK0/meta/4ef24ca4",
-        "/tmp/lua-language-server.JcK0/meta/71ea464b"
+        "/tmp/lua-language-server.JcK0/meta/71ea464b",
+        "/tmp/lua-language-server.rWct/meta/4ef24ca4",
+        "/tmp/lua-language-server.rWct/meta/71ea464b"
     ],
     "workspace.checkThirdParty": false
 }
