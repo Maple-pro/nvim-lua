@@ -1,6 +1,8 @@
 # Neovim lua configuration
 
-> Reference: [nshen/learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/tree/main)
+> Reference: 
+> - [nshen/learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/tree/main)
+> - [Neelfrost/nvim-config](https://github.com/Neelfrost/nvim-config)
 
 ## Shortcuts
 

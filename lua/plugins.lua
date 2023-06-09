@@ -155,6 +155,19 @@ packer.startup({
     if paccker_bootstrap then
       packer.sync()
     end
+
+    ----------------------------------------------
+    use({
+        "lervag/vimtex",
+        -- opt = true,
+        config = function ()
+            require("plugin-config.vimtex")
+        end,
+        ft = {
+            "tex",
+            "bib"
+        }
+    })
   end,
   config = {
     -- 锁定插件版本在snapshots目录

@@ -16,6 +16,7 @@ require("plugin-config.bufferline")
 require("plugin-config.telescope")
 require("plugin-config.comment")
 require("plugin-config.nvim-treesitter")
+-- require("plugin-config.vimtex")
 -- 内置LSP
 require("lsp.setup")
 require("lsp.cmp")
