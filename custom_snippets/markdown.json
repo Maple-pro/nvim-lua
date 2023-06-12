@@ -1,0 +1,7 @@
+{
+    "test snippet": {
+        "prefix": "test",
+        "body": ["yangfeng test"],
+        "description": "test snippet"
+    }
+}

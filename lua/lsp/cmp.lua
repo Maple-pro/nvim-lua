@@ -41,6 +41,11 @@ cmp.setup({
   mapping = require("keybindings").cmp(cmp),
   -- 使用lspkind-nvim显示类型图标
   formatting = require("lsp.ui").formatting,
+  -- window style
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  }
 })
 
 -- Use buffer source for `/`.

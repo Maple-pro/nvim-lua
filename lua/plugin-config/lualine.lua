@@ -18,6 +18,8 @@ lualine.setup({
     section_separators = {
       left = " ",
       right = "",
+      -- left = "|",
+      -- right = "|",
     },
     globalstatus = true,
   },

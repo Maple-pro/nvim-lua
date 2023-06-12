@@ -10,6 +10,14 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    border = "single"
+  }
+)
+
+require("lspconfig.ui.windows").default_options.border = "single"
+
 -- lspkind
 local lspkind = require("lspkind")
 lspkind.init({

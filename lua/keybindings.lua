@@ -64,6 +64,42 @@ map("n", "<C-_>", "gcc", { noremap = false })
 map("v", "<C-_>", "gcc", { noremap = false })
 
 -- lsp 回调函数快捷键设置
+-- rename
+--[[
+Lspsaga 替换 rn
+mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
+--]]
+map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+-- code action
+--[[
+Lspsaga 替换 ca
+mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
+--]]
+map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+-- go xx
+-- map('n', 'gd', '<cmd>Lspsaga preview_definition<CR>', opt)
+-- map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+map("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'normal', })<CR>", opt)
+-- Lspsaga 替换 gh
+-- map("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
+map("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+--[[
+Lspsaga 替换 gr
+mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
+--]]
+map("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
+--[[
+Lspsaga 替换 gp, gj, gk
+mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
+--]]
+-- diagnostic
+map("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
+map("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
+map("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
+map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+
 pluginKeys.mapLSP = function(mapbuf)
   -- rename
   --[[
@@ -194,7 +230,7 @@ pluginKeys.cmp = function(cmp)
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
     ["<CR>"] = cmp.mapping.confirm({
-      select = true,
+      select = false,
       behavior = cmp.ConfirmBehavior.Replace,
     }),
     -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.

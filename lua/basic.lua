@@ -67,3 +67,7 @@ vim.o.pumheight = 10
 vim.o.showmode = false
 -- 配置剪切板
 vim.opt.clipboard = "unnamedplus"
+
+-- python
+vim.g.python3_host_prog = "/home/yangfeng/mambaforge/bin/python3"
+vim.g.python_host_prog = "/home/yangfeng/mambaforge/bin/python"

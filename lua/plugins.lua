@@ -89,7 +89,12 @@ packer.startup({
     -- 补全引擎
     use("hrsh7th/nvim-cmp")
     -- Snippet 引擎
-    use("hrsh7th/vim-vsnip")
+    use({
+        "hrsh7th/vim-vsnip",
+        config = function ()
+            vim.g.vsnip_snippet_dir = "/home/yangfeng/.config/nvim/custom_snippets"
+        end
+    })
     -- 补全源
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
