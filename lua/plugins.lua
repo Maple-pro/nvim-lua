@@ -173,6 +173,12 @@ packer.startup({
             "bib"
         }
     })
+    ----------------------------------------------
+    use {
+        'xeluxee/competitest.nvim',
+        requires = 'MunifTanjim/nui.nvim',
+        config = function() require'competitest'.setup() end
+    }
   end,
   config = {
     -- 锁定插件版本在snapshots目录
