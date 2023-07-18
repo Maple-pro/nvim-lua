@@ -174,11 +174,18 @@ packer.startup({
         }
     })
     ----------------------------------------------
-    use {
+    use ({
         'xeluxee/competitest.nvim',
         requires = 'MunifTanjim/nui.nvim',
         config = function() require'competitest'.setup() end
-    }
+    })
+    use ({
+        'phaazon/hop.nvim',
+        branch = 'v2',
+        config = function()
+            require("plugin-config.hop")
+        end
+    })
   end,
   config = {
     -- 锁定插件版本在snapshots目录

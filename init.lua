@@ -18,6 +18,7 @@ require("plugin-config.comment")
 require("plugin-config.nvim-treesitter")
 -- require("plugin-config.vimtex")
 require("plugin-config.competitest")
+require("plugin-config.hop")
 -- 内置LSP
 require("lsp.setup")
 require("lsp.cmp")
