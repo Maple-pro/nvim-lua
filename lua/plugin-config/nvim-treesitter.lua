@@ -9,7 +9,7 @@ treesitter.setup({
   -- :TSInstallInfo 命令查看支持的语言
   ensure_installed = {
     "json", "html", "css", "vim", "lua", "javascript", "typescript", "tsx", "markdown", "markdown_inline",
-    "kotlin", "java", "python", "c", "cpp", "cuda", "dart", "go", "latex", "sql", "vue"
+    "kotlin", "java", "python", "c", "cpp", "cuda", "dart", "go", "latex", "sql", "vue", "vimdoc"
   },
   -- ensure_installed = "maintained",
 
