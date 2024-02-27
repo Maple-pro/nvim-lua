@@ -1,5 +1,4 @@
--- https://github.com/kyazdani42/nvim-tree.lua
--- local nvim_tree = require'nvim-tree'
+-- https://github.com/nvim-tree/nvim-tree.lua
 local status, nvim_tree = pcall(require, "nvim-tree")
 if not status then
   vim.notify("没有找到 nvim-tree")

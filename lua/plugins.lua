@@ -12,7 +12,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     "--depth",
     "1",
     "https://github.com/wbthomason/packer.nvim",
-    -- "https://gitcode.net/mirrors/wbthomason/packer.nvim",
     install_path,
   })
 
@@ -38,18 +37,18 @@ packer.startup({
     -------------------------- plugins -------------------------------------------
     -- nvim-tree
     use({
-      "kyazdani42/nvim-tree.lua",
-      requires = "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-tree.lua",
+      requires = "nvim-tree/nvim-web-devicons",
     })
     -- bufferline
     use({
       "akinsho/bufferline.nvim",
-      requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
+      requires = { "nvim-tree/nvim-web-devicons", "moll/vim-bbye" },
     })
     -- lualine
     use({
       "nvim-lualine/lualine.nvim",
-      requires = { "kyazdani42/nvim-web-devicons" },
+      requires = { "nvim-tree/nvim-web-devicons" },
     })
     use("arkav/lualine-lsp-progress")
     -- telescope
@@ -60,19 +59,13 @@ packer.startup({
     -- telescope extensions
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
-    -- dashboard-nvim
-    -- use({
-    --   "glepnir/dashboard-nvim",
-    --   event = "VimEnter",
-    --   config = function()
-    --     require("dashboard").setup {
-    --       theme = 'Hyper'
-    --     }
-    --   end,
-    --   requires = { "kyazdani42/nvim-web-devicons" }
-    -- })
     -- project
-    use("ahmedkhalf/project.nvim")
+    use({
+      "ahmedkhalf/project.nvim",
+      config = function()
+        require("project_nvim").setup {}
+      end
+    })
     -- treesitter
     use({
       "nvim-treesitter/nvim-treesitter",
@@ -159,7 +152,12 @@ packer.startup({
     -- use("Pocco81/DAPInstall.nvim")
     -- use("jbyuki/one-small-step-for-vimkind")
 
-    use("j-hui/fidget.nvim")
+    use({
+      "j-hui/fidget.nvim",
+      config = function()
+        require("fidget").setup {}
+      end
+    })
     if paccker_bootstrap then
       packer.sync()
     end

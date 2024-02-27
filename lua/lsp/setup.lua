@@ -1,3 +1,4 @@
+-- [Deprecated] The file use nvim-lsp-installer plugin, which is unmaintained
 -- local lsp_installer = require("nvim-lsp-installer")
 require("nvim-lsp-installer").setup({
   -- 自动安装 Language Servers
