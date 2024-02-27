@@ -82,8 +82,11 @@ packer.startup({
     -- indent-blankline
     use("lukas-reineke/indent-blankline.nvim")
     --------------------- LSP --------------------
-    -- use({ "williamboman/nvim-lsp-installer", commit = "36b44679f7cc73968dbb3b09246798a19f7c14e0" })
-    use({ "williamboman/nvim-lsp-installer" })
+    -- use({ "williamboman/nvim-lsp-installer" }) // archived
+    use({
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+    })
     -- Lspconfig
     use({ "neovim/nvim-lspconfig" })
     -- 补全引擎

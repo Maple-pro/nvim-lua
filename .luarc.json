@@ -71,6 +71,8 @@
         "/tmp/lua-language-server.xUSU/meta/483f2da2",
         "/tmp/lua-language-server.GGQP/meta/483f2da2",
         "/tmp/lua-language-server.kLTo/meta/483f2da2",
-        "/tmp/lua-language-server.I85c/meta/483f2da2"
+        "/tmp/lua-language-server.I85c/meta/483f2da2",
+        "${3rd}/luassert/library",
+        "/tmp/lua-language-server.xGLR/meta/483f2da2"
     ]
 }

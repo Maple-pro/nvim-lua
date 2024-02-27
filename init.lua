@@ -20,7 +20,8 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.competitest")
 require("plugin-config.hop")
 -- 内置LSP
-require("lsp.setup")
+-- require("lsp.setup")
+require("lsp.mason")
 require("lsp.cmp")
 require("lsp.ui")
 
