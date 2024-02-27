@@ -1,4 +1,5 @@
--- Documentation: https://github.com/williamboman/mason-lspconfig.nvim
+-- mason-lspconfig documentation: https://github.com/williamboman/mason-lspconfig.nvim
+-- mason Documentation: https://github.com/williamboman/mason.nvim
 local mason = require("mason")
 local mason_lspconfig = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
