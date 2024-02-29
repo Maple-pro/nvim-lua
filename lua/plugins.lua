@@ -134,7 +134,7 @@ packer.startup({
     use("EdenEast/nightfox.nvim")
 
     -------------------------------------------------------
-    use({ "akinsho/toggleterm.nvim" })
+    use({ "akinsho/toggleterm.nvim", tag = '*' })
     -- surround
     use("ur4ltz/surround.nvim")
     -- Comment

@@ -256,5 +256,9 @@
         "/tmp/lua-language-server.SD4i/meta/71ea464b",
         "/tmp/lua-language-server.nksM/meta/71ea464b"
     ],
-    "workspace.checkThirdParty": false
+    "workspace.checkThirdParty": false,
+    "diagnostics.globals": [
+        "vim",
+        "_lazygit_toggle"
+    ]
 }
