@@ -116,22 +116,23 @@ packer.startup({
     use("simrat39/rust-tools.nvim")
     --------------------- colorschemes --------------------
     -- tokyonight
-    use("folke/tokyonight.nvim")
+    -- use("folke/tokyonight.nvim")
     -- OceanicNext
-    use("mhartington/oceanic-next")
+    -- use("mhartington/oceanic-next")
     -- gruvbox
-    use({
-      "ellisonleao/gruvbox.nvim",
-      requires = { "rktjmp/lush.nvim" },
-    })
+    -- use({
+    --   "ellisonleao/gruvbox.nvim",
+    --   requires = { "rktjmp/lush.nvim" },
+    -- })
     -- zephyr
     -- use("glepnir/zephyr-nvim")
     -- nord
-    use("shaunsingh/nord.nvim")
+    -- use("shaunsingh/nord.nvim")
     -- onedark
-    use("ful1e5/onedark.nvim")
+    -- use("ful1e5/onedark.nvim")
+    use("navarasu/onedark.nvim")
     -- nightfox
-    use("EdenEast/nightfox.nvim")
+    -- use("EdenEast/nightfox.nvim")
 
     -------------------------------------------------------
     use({ "akinsho/toggleterm.nvim", tag = '*' })
