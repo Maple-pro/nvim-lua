@@ -77,7 +77,7 @@ if in_wsl then
         cache_enabled = true
     }
 else
-    vim.opt.clipboard = "unnameplus"
+    vim.opt.clipboard = "unnamedplus"
 end
 
 -- python

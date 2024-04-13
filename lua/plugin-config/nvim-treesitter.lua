@@ -5,6 +5,7 @@ if not status then
 end
 
 treesitter.setup({
+  modules = {},
   -- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
   ensure_installed = {
@@ -12,6 +13,9 @@ treesitter.setup({
     "kotlin", "java", "python", "c", "cpp", "cuda", "dart", "go", "latex", "sql", "vue", "vimdoc"
   },
   -- ensure_installed = "maintained",
+  sync_install = false,
+  ignore_install = {},
+  auto_install = false,
 
   -- 启用代码高亮模块
   highlight = {
