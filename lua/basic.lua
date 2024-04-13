@@ -67,7 +67,18 @@ vim.o.pumheight = 10
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
 -- 配置剪切板
-vim.opt.clipboard = "unnamedplus"
+local in_wsl = os.getenv('WSL_DISTRO_NAME') ~= nil
+
+if in_wsl then
+    vim.g.clipboard = {
+        name = "WSLClipboard",
+        copy = { ["+"] = { "clip.exe" }, ["*"] = { "clip.exe" } },
+        paste = { ["+"] = { "nvim_paste" }, ["*"] = { "nvim_paste" } },
+        cache_enabled = true
+    }
+else
+    vim.opt.clipboard = "unnameplus"
+end
 
 -- python
 vim.g.python3_host_prog = "/home/yangfeng/mambaforge/bin/python3"
