@@ -5,7 +5,10 @@ local opts = {
         end
 
         require("keybindings").mapLSP(buf_set_keymap)
-    end
+    end,
+    settings = {
+        requireConfig = true
+    }
 }
 
 return {
