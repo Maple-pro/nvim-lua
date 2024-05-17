@@ -33,3 +33,4 @@ pcall(telescope.load_extension, "env")
 -- load_extension, somewhere after setup function:
 pcall(telescope.load_extension, "ui-select")
 pcall(telescope.load_extension, "projects")
+pcall(telescope.load_extension, "notify")

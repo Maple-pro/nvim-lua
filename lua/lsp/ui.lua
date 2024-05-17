@@ -4,7 +4,7 @@ vim.diagnostic.config({
   signs = true,
   update_in_insert = false,
 })
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
@@ -26,57 +26,21 @@ lspkind.init({
   -- defines how annotations are shown
   -- default: symbol
   -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
-  mode = "symbol_text",
-  -- default symbol map
-  -- can be either 'default' (requires nerd-fonts font) or
-  -- 'codicons' for codicon preset (requires vscode-codicons font)
-  --
-  -- default: 'default'
-  preset = "codicons",
-  -- override preset symbols
-  --
-  -- default: {}
-  symbol_map = {
-    Text = "",
-    Method = "",
-    Function = "",
-    Constructor = "",
-    Field = "ﰠ",
-    Variable = "",
-    Class = "ﴯ",
-    Interface = "",
-    Module = "",
-    Property = "ﰠ",
-    Unit = "塞",
-    Value = "",
-    Enum = "",
-    Keyword = "",
-    Snippet = "",
-    Color = "",
-    File = "",
-    Reference = "",
-    Folder = "",
-    EnumMember = "",
-    Constant = "",
-    Struct = "פּ",
-    Event = "",
-    Operator = "",
-    TypeParameter = "",
-  },
+  mode = "text",
 })
 
 local lspsaga = require("lspsaga")
 lspsaga.setup({ -- defaults ...
   debug = false,
-  use_saga_diagnostic_sign = true,
+  use_saga_diagnostic_sign = false,
   -- diagnostic sign
-  error_sign = "",
-  warn_sign = "",
-  hint_sign = "",
+  error_sign = "",
+  warn_sign = "",
+  hint_sign = "",
   infor_sign = "",
   diagnostic_header_icon = "   ",
   -- code action title icon
-  code_action_icon = " ",
+  code_action_icon = "",
   code_action_prompt = {
     enable = true,
     sign = true,
@@ -106,7 +70,7 @@ lspsaga.setup({ -- defaults ...
     quit = "<ESC>",
     exec = "<CR>",
   },
-  definition_preview_icon = "  ",
+  -- definition_preview_icon = "  ",
   border_style = "single",
   rename_prompt_prefix = "➤",
   rename_output_qflist = {

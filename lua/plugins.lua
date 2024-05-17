@@ -50,7 +50,6 @@ packer.startup({
       "nvim-lualine/lualine.nvim",
       requires = { "nvim-tree/nvim-web-devicons" },
     })
-    use("arkav/lualine-lsp-progress")
     -- telescope
     use({
       "nvim-telescope/telescope.nvim",
@@ -71,7 +70,6 @@ packer.startup({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
     })
-    use("p00f/nvim-ts-rainbow")
     -- indent-blankline
     use("lukas-reineke/indent-blankline.nvim")
     --------------------- LSP --------------------
@@ -103,6 +101,7 @@ packer.startup({
     -- UI 增强
     use("onsails/lspkind-nvim")
     use("nvimdev/lspsaga.nvim")
+    use("rcarriga/nvim-notify")
     -- 代码格式化
     use("mhartington/formatter.nvim")
     use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
@@ -129,7 +128,6 @@ packer.startup({
     -- nord
     -- use("shaunsingh/nord.nvim")
     -- onedark
-    -- use("ful1e5/onedark.nvim")
     use("navarasu/onedark.nvim")
     -- nightfox
     -- use("EdenEast/nightfox.nvim")
@@ -153,12 +151,12 @@ packer.startup({
     -- use("Pocco81/DAPInstall.nvim")
     -- use("jbyuki/one-small-step-for-vimkind")
 
-    use({
-      "j-hui/fidget.nvim",
-      config = function()
-        require("fidget").setup {}
-      end
-    })
+    -- use({
+    --   "j-hui/fidget.nvim",
+    --   config = function()
+    --     require("fidget").setup {}
+    --   end
+    -- })
     if paccker_bootstrap then
       packer.sync()
     end
@@ -190,26 +188,17 @@ packer.startup({
     })
   end,
   config = {
-    -- 锁定插件版本在snapshots目录
-    -- snapshot_path = require("packer.util").join_paths(vim.fn.stdpath("config"), "snapshots"),
-    -- 这里锁定插件版本在v1，不会继续更新插件
-    -- snapshot = "v1",
-
     -- 最大并发数
     max_jobs = 16,
     -- 自定义源
     git = {
-      -- default_url_format = "https://hub.fastgit.xyz/%s",
-      -- default_url_format = "https://mirror.ghproxy.com/https://github.com/%s",
-      -- default_url_format = "https://gitcode.net/mirrors/%s",
-      -- default_url_format = "https://gitclone.com/github.com/%s",
     },
-    -- display = {
+    display = {
     -- 使用浮动窗口显示
-    --   open_fn = function()
-    --     return require("packer.util").float({ border = "single" })
-    --   end,
-    -- },
+      open_fn = function()
+        return require("packer.util").float({ border = "single" })
+      end,
+    },
   },
 })
 

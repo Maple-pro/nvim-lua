@@ -16,8 +16,8 @@ lualine.setup({
     },
     -- https://github.com/ryanoasis/powerline-extra-symbols
     section_separators = {
-      left = " ",
-      right = "",
+      -- left = " ",
+      -- right = "",
       -- left = "|",
       -- right = "|",
     },
@@ -29,7 +29,7 @@ lualine.setup({
       "filename",
       {
         "lsp_progress",
-        spinner_symbols = { " ", " ", " ", " ", " ", " " },
+        -- spinner_symbols = { " ", " ", " ", " ", " ", " " },
       },
     },
     lualine_x = {
