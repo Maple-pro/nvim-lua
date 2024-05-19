@@ -59,12 +59,12 @@ packer.startup({
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
     -- project
-    use({
-      "ahmedkhalf/project.nvim",
-      config = function()
-        require("project_nvim").setup {}
-      end
-    })
+    -- use({
+    --   "ahmedkhalf/project.nvim",
+    --   config = function()
+    --     require("project_nvim").setup {}
+    --   end
+    -- })
     -- treesitter
     use({
       "nvim-treesitter/nvim-treesitter",

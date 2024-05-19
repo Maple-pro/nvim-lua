@@ -69,8 +69,8 @@ pluginKeys.mapLSP = function(mapbuf)
   -- mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
   mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
   -- code action
-  -- mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
-  mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
+  mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+  -- mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
   -- go xx
   mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'normal', })<CR>", opt)
   -- hover information about the symbol

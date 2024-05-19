@@ -20,6 +20,7 @@ require("plugin-config.competitest")
 require("plugin-config.hop")
 require("plugin-config.toggleterm")
 require("plugin-config.nvim-notify")
+require("plugin-config.gitsigns")
 -- 内置LSP
 -- require("lsp.setup")
 require("lsp.mason")

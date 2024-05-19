@@ -1,14 +1,23 @@
 -- 自定义图标
+-- Highlight entire line for errors
+-- Highlight the line number for warnings
 vim.diagnostic.config({
   virtual_text = true,
-  signs = true,
+  signs = {
+    linehl = {
+      [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+    },
+    numhl = {
+      [vim.diagnostic.severity.WARN] = 'WarningMsg',
+    },
+  },
   update_in_insert = false,
 })
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
+-- local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+-- for type, icon in pairs(signs) do
+--   local hl = "DiagnosticSign" .. type
+--   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl }) // deprecated
+-- end
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
   vim.lsp.handlers.hover, {
@@ -31,16 +40,25 @@ lspkind.init({
 
 local lspsaga = require("lspsaga")
 lspsaga.setup({ -- defaults ...
+  ui = {
+    use_saga_diagnostic_sign = false,
+    diagnostic = "Dia",
+    code_action = "CA",
+  },
+  lightbulb = {
+    enable = false,
+  },
   debug = false,
   use_saga_diagnostic_sign = false,
   -- diagnostic sign
-  error_sign = "",
-  warn_sign = "",
-  hint_sign = "",
-  infor_sign = "",
+  error_sign = "E",
+  warn_sign = "W",
+  hint_sign = "H",
+  infor_sign = "I",
   diagnostic_header_icon = "   ",
   -- code action title icon
-  code_action_icon = "",
+  code_action = "A",
+  code_action_icon = "A",
   code_action_prompt = {
     enable = true,
     sign = true,

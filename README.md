@@ -6,6 +6,8 @@
 
 ## Shortcuts
 
+> For more shortcuts, please visit: [Shortcuts - NVim](https://gist.github.com/Maple-pro/988bbfc01e39c8b110cf988a22e54f8f#nvim)
+
 ### Navigation
 
 - `<C-o>`: back to previous space
