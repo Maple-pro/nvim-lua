@@ -25,6 +25,7 @@ function _lazygit_toggle()
 end
 
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>git", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
