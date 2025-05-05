@@ -21,7 +21,7 @@ local servers = {
     pyright = require("lsp.config.pyright"),
     -- remark_ls = require("lsp.config.markdown"),
     rust_analyzer = require("lsp.config.rust"),
-    tsserver = require("lsp.config.ts"),
+    ts_ls = require("lsp.config.ts"),
     yamlls = require("lsp.config.yamlls"),
     -- ltex = nil -- language server use default setup handler
 }
