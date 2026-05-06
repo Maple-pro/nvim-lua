@@ -1,7 +1,3 @@
--- leader key 为空
--- vim.g.mapleader = " "
--- vim.g.maplocalleader = " "
-
 local opt = {
   noremap = true,
   silent = true,

@@ -4,6 +4,14 @@
 > - [nshen/learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/tree/main)
 > - [Neelfrost/nvim-config](https://github.com/Neelfrost/nvim-config)
 
+## Commands
+
+```
+:Lazy: manage plugins
+:Mason: manage lsp servers
+:TSUpdate: manage tree-sitter servers
+```
+
 ## Shortcuts
 
 > For more shortcuts, please visit: [Shortcuts - NVim](https://gist.github.com/Maple-pro/988bbfc01e39c8b110cf988a22e54f8f#nvim)

@@ -19,11 +19,10 @@ vim.diagnostic.config({
 --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl }) // deprecated
 -- end
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = "single"
-  }
-)
+-- 配置 LSP 悬浮窗口边框
+vim.lsp.buf.hover({
+    border = 'single',
+})
 
 require("lspconfig.ui.windows").default_options.border = "single"
 

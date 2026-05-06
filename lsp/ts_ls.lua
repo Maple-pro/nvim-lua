@@ -1,6 +1,7 @@
 local keybindings = require("keybindings")
 local ts_utils = require("nvim-lsp-ts-utils")
-local opts = {
+
+return {
   flags = {
     debounce_text_changes = 150,
   },
@@ -26,11 +27,6 @@ local opts = {
     -- 禁用格式化功能，交给专门插件插件处理
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
-    local function buf_set_keymap(...)
-      vim.api.nvim_buf_set_keymap(bufnr, ...)
-    end
-    -- 绑定快捷键
-    keybindings.mapLSP(buf_set_keymap)
     -- defaults
     ts_utils.setup({
       debug = false,
@@ -84,11 +80,5 @@ local opts = {
     ts_utils.setup_client(client)
     -- no default maps, so you may want to define some here
     keybindings.mapTsLSP(buf_set_keymap)
-  end,
-}
-
-return {
-  on_setup = function(server)
-    server.setup(opts)
   end,
 }
