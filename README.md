@@ -4,6 +4,12 @@
 > - [nshen/learn-neovim-lua](https://github.com/nshen/learn-neovim-lua/tree/main)
 > - [Neelfrost/nvim-config](https://github.com/Neelfrost/nvim-config)
 
+## Dependencies
+
+```
+sudo pacman -Sy xsel xclip npm go tree-sitter-cli lazygit
+```
+
 ## Commands
 
 ```
