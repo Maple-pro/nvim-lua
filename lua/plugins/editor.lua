@@ -30,4 +30,10 @@ return {
     "akinsho/toggleterm.nvim",
     config = function() require("plugin-config.toggleterm") end,
   },
+
+  {
+    "https://codeberg.org/andyg/leap.nvim.git",
+    lazy = false,
+    config = function() require("plugin-config.leap") end,
+  },
 }
