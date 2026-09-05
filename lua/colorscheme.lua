@@ -6,7 +6,10 @@ end
 
 onedark.setup {
     style = 'dark',
-    transparent = false
+    transparent = true,
+    highlights = {
+        Normal = { bg = '#1e1e2e' },
+    }
 }
 
 onedark.load()
