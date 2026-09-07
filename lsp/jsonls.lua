@@ -1,10 +1,13 @@
+local ok, schemastore = pcall(require, "schemastore")
+
+local settings = {
+  json = {},
+}
+
+if ok and schemastore.json and schemastore.json.schemas then
+  settings.json.schemas = schemastore.json.schemas()
+end
+
 return {
-  settings = {
-    json = {
-      schemas = require("schemastore").json.schemas(),
-    },
-  },
-  flags = {
-    debounce_text_changes = 150,
-  },
+  settings = settings,
 }

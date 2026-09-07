@@ -81,6 +81,12 @@ else
     vim.opt.clipboard = "unnamedplus"
 end
 
--- python
-vim.g.python3_host_prog = "/home/yangfeng/mambaforge/bin/python3"
-vim.g.python_host_prog = "/home/yangfeng/mambaforge/bin/python"
+local python3 = vim.fn.exepath("python3")
+if python3 ~= "" then
+  vim.g.python3_host_prog = python3
+end
+
+local python2 = vim.fn.exepath("python2")
+if python2 ~= "" then
+  vim.g.python_host_prog = python2
+end

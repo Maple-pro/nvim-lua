@@ -3,6 +3,9 @@ local mason_lspconfig = require("mason-lspconfig")
 
 mason.setup()
 
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+vim.lsp.config("*", { capabilities = capabilities })
+
 local servers = {
     "bashls",
     "clangd",
@@ -18,9 +21,12 @@ local servers = {
     "yamlls",
 }
 
-mason_lspconfig.setup{
+mason_lspconfig.setup({
   ensure_installed = servers,
-}
+  automatic_enable = {
+    exclude = { "rust_analyzer" },
+  },
+})
 
 -- 全局 LSP 附加功能：快捷键、自动命令、功能配置
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -29,13 +35,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local client = vim.lsp.get_client_by_id(args.data.client_id)
     if not client then return end
 
-    -- 你的原有快捷键函数（完全兼容你现有的 keybindings.lua）
-    local function buf_set_keymap(...)
-      vim.api.nvim_buf_set_keymap(bufnr, ...)
+    local function mapbuf(mode, lhs, rhs, opts)
+      opts = vim.tbl_extend("force", { buffer = bufnr }, opts or {})
+      vim.keymap.set(mode, lhs, rhs, opts)
     end
 
     -- 统一加载 LSP 快捷键
-    require("keybindings").mapLSP(buf_set_keymap)
+    require("keybindings").mapLSP(mapbuf)
   end,
 })
-

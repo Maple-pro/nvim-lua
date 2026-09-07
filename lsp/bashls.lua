@@ -1,6 +1,7 @@
 return {
-  capabilities = require("cmp_nvim_lsp").default_capabilities(),
-  flags = {
-    debounce_text_changes = 150,
+  settings = {
+    bashIde = {
+      globPattern = vim.env.GLOB_PATTERN or "*@(.sh|.inc|.bash|.command)",
+    },
   },
 }

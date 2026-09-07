@@ -1,8 +1,4 @@
 return {
-  flags = {
-    debounce_text_changes = 150,
-  },
-  single_file_support = true,
   settings = {
     pyright = {
       disableLanguageServices = false,
@@ -17,7 +13,7 @@ return {
         useLibraryCodeForTypes = true,
       },
       -- pythonPath = "/home/yangfeng/.conda/env/hello/bin/python",
-      venvPath = "~/.conda/env",
-    }
+      venvPath = vim.fn.expand("~/.conda/env"),
+    },
   },
 }

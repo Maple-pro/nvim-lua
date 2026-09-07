@@ -17,6 +17,9 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("plugin-config.indent-blankline")
+    end,
   },
   {
     "navarasu/onedark.nvim",
